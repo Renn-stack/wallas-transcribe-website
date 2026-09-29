@@ -162,34 +162,46 @@ main section { padding-block: 3.5rem; }
 }
 .screen {
   position: relative; height: 100%; overflow: hidden; border-radius: 2.4rem;
-  background: var(--bg); color: var(--text);
-  display: flex; flex-direction: column; gap: .875rem;
-  padding: 3rem 1.125rem 1.25rem; font-size: .9375rem;
+  background: #0E0B17; color: #F4F1FA; display: flex; flex-direction: column; font-size: .9375rem;
+}
+.app-head {
+  background: #6D3FE0; color: #FFFFFF; padding: 2.75rem 1rem 1rem; border-radius: 0 0 1.5rem 1.5rem;
+  display: flex; flex-direction: column; gap: .375rem;
 }
 .island { position: absolute; top: .625rem; left: 50%; translate: -50% 0; width: 32%; height: 1.5rem; border-radius: 999px; background: #000; }
 .status { position: absolute; top: .75rem; inset-inline: 1.5rem; display: flex; justify-content: space-between; align-items: center; font-size: .8125rem; font-weight: 700; }
-.batt { width: 1.375rem; height: .6875rem; border: 1.5px solid currentColor; border-radius: .25rem; position: relative; opacity: .8; }
+.batt { width: 1.375rem; height: .6875rem; border: 1.5px solid currentColor; border-radius: .25rem; position: relative; opacity: .9; }
 .batt::after { content: ""; position: absolute; inset: 1.5px 5px 1.5px 1.5px; background: currentColor; border-radius: 1px; }
-.app-bar { display: flex; align-items: center; gap: .5rem; font-weight: 800; font-size: 1.25rem; letter-spacing: -.02em; }
-.app-bar .back { color: var(--accent); font-size: 1.75rem; line-height: 1; font-weight: 400; margin-top: -.2rem; }
-.player {
-  display: flex; align-items: center; gap: .625rem;
-  background: var(--surface); border: 1px solid var(--line); border-radius: 1.125rem; padding: .625rem .75rem;
+.nav-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: .375rem; }
+.pill { background: rgb(255 255 255 / .2); border-radius: 999px; padding: .3rem .8rem; font-weight: 600; font-size: .875rem; }
+.dots { display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: rgb(255 255 255 / .2); font-size: .5rem; letter-spacing: .1em; }
+.date { font-size: 1.625rem; font-weight: 800; letter-spacing: -.03em; line-height: 1.1; }
+.meta { font-size: .8125rem; opacity: .92; }
+.player { display: flex; align-items: center; gap: .625rem; background: rgb(0 0 0 / .18); border-radius: 1rem; padding: .625rem .75rem; margin-top: .375rem; }
+.player .play { width: 2.25rem; height: 2.25rem; border-radius: 50%; background: #FFFFFF; display: grid; place-items: center; flex-shrink: 0; }
+.player .play svg { width: 1rem; height: 1rem; fill: #6D3FE0; margin-left: 2px; }
+.pl-body { flex: 1; min-width: 0; display: grid; gap: .25rem; }
+.wave { display: flex; align-items: center; gap: 2px; height: 1.375rem; }
+.wave i { flex: 1; height: var(--h); border-radius: 2px; background: rgb(255 255 255 / .55); }
+.times { display: flex; justify-content: space-between; font-size: .6875rem; font-variant-numeric: tabular-nums; opacity: .92; }
+.body { display: grid; padding: 1.125rem 1rem; }
+.body > * { grid-area: 1 / 1; }
+.working {
+  align-self: start; display: grid; gap: .5rem; visibility: hidden;
+  background: #1A1526; border: 1.5px dashed #7C5CE6; border-radius: 1rem; padding: .75rem .875rem;
 }
-.player .play { width: 2rem; height: 2rem; border-radius: 50%; background: var(--accent); display: grid; place-items: center; flex-shrink: 0; }
-.player .play svg { width: 1rem; height: 1rem; fill: var(--on-accent); }
-.wave { flex: 1; display: flex; align-items: center; gap: 2px; height: 1.75rem; }
-.wave i { flex: 1; height: var(--h); border-radius: 2px; background: var(--accent); }
-.time { font-size: .8125rem; font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; }
-.state { position: relative; height: 1.5rem; font-size: .8125rem; font-weight: 700; }
-.state > span { position: absolute; inset: 0 auto 0 0; display: inline-flex; align-items: center; gap: .375rem; }
-.state .working { color: var(--muted); visibility: hidden; }
-.state .done { color: var(--accent); }
-.state .done svg { width: 1rem; height: 1rem; fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-.meta { font-size: .8125rem; color: var(--muted); margin-top: -.625rem; }
-.words { font-size: 1.25rem; line-height: 1.5; font-weight: 500; }
-.actions { margin-top: auto; display: flex; gap: .5rem; }
-.actions > span { flex: 1; text-align: center; padding: .625rem; border-radius: 999px; background: var(--tint); color: var(--accent); font-weight: 700; font-size: .875rem; }
+.working .lbl { font-weight: 700; font-size: .875rem; }
+.working .wave i { background: #B69CFF; }
+.words { font-size: 1.3125rem; line-height: 1.55; font-weight: 500; }
+.hlt { background: rgb(109 63 224 / .45); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.dock {
+  position: absolute; bottom: 1.25rem; left: 50%; translate: -50% 0;
+  display: flex; align-items: center; gap: 1rem; padding: .3rem 1rem .3rem .3rem;
+  background: #FFFFFF; color: #6D3FE0; border-radius: 999px; box-shadow: 0 .5rem 1.5rem rgb(109 63 224 / .45);
+}
+.dock .pause { display: inline-flex; align-items: center; gap: .375rem; background: #6D3FE0; color: #FFFFFF; border-radius: 999px; padding: .45rem .9rem; font-weight: 700; font-size: .875rem; font-variant-numeric: tabular-nums; }
+.dock svg { width: 1.125rem; height: 1.125rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.dock .pause svg { width: .875rem; height: .875rem; fill: currentColor; stroke: none; }
 .hero-icon {
   position: absolute; top: 68%; left: max(0rem, calc(50% - min(19rem, 72vw) / 2 - 2.25rem));
   width: clamp(4rem, 14vw, 5.5rem); border-radius: 22.5%;
@@ -328,27 +340,22 @@ main section { padding-block: 3.5rem; }
 
   .anim .replay { display: inline-flex; }
 
-  /* Portada: la nota de voz se reproduce y aparece el texto, una sola vez */
-  .anim .demo .wave i { background: var(--line); }
-  .anim .demo .state .done { visibility: hidden; }
-  .anim .demo .words span, .anim .demo .actions { opacity: 0; }
+  /* Portada: el audio se transcribe y aparece el texto, una sola vez */
+  .anim .demo .working .wave i { background: rgb(182 156 255 / .25); }
+  .anim .demo .hlt { background-color: transparent; }
+  .anim .demo .words .hlt span, .anim .demo .dock { opacity: 0; }
 
-  .anim .demo.play .wave i { animation: bar .5s var(--ease) forwards; animation-delay: calc(.5s + var(--b) * 45ms); }
-  .anim .demo.play .state .working { animation: show 1.1s 1.2s; }
-  .anim .demo.play .state .working::before {
-    content: ""; width: .75rem; height: .75rem; border-radius: 50%;
-    border: 2px solid currentColor; border-right-color: transparent; animation: spin .7s linear 2;
-  }
-  .anim .demo.play .state .done { animation: pop .4s 2.3s var(--ease) both; }
-  .anim .demo.play .words span { display: inline-block; animation: word .45s var(--ease) forwards; animation-delay: calc(1.5s + var(--w) * 80ms); }
-  .anim .demo.play .actions { animation: rise .5s 3.4s var(--ease) forwards; }
+  .anim .demo.play .working { animation: show 1.9s .2s; }
+  .anim .demo.play .working .wave i { animation: fillbar .3s var(--ease) forwards; animation-delay: calc(.45s + var(--b) * 55ms); }
+  .anim .demo.play .words .hlt span { display: inline-block; animation: word .45s var(--ease) forwards; animation-delay: calc(2.1s + var(--w) * 70ms); }
+  .anim .demo.play .hlt { animation: hl .6s 3.4s var(--ease) forwards; }
+  .anim .demo.play .dock { animation: rise .5s 3.5s var(--ease) forwards; }
 
   .anim .rec.in, .anim .in .rec { animation: pulse 1.4s ease-in-out 3; }
 
-  @keyframes bar { 0% { background: var(--line); transform: scaleY(1); } 50% { transform: scaleY(1.35); } 100% { background: var(--accent); transform: scaleY(1); } }
+  @keyframes fillbar { 50% { transform: scaleY(1.35); } to { background: #B69CFF; transform: none; } }
+  @keyframes hl { to { background-color: rgb(109 63 224 / .45); } }
   @keyframes show { 0%, 100% { visibility: visible; } }
-  @keyframes spin { to { transform: rotate(1turn); } }
-  @keyframes pop { from { visibility: visible; opacity: 0; transform: scale(.8); } to { visibility: visible; opacity: 1; transform: none; } }
   @keyframes word { from { opacity: 0; transform: translateY(.4em); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
   @keyframes rise { from { opacity: 0; transform: translateY(.5rem); } to { opacity: 1; transform: none; } }
   @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgb(255 95 122 / .55); } 60% { box-shadow: 0 0 0 .4em rgb(255 95 122 / 0); } }

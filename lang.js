@@ -61,7 +61,7 @@
     // Portada: la nota de voz se convierte en texto (una vez, menos de 5 segundos)
     var demo = document.getElementById('demo'), play = null;
     if (demo) {
-      var ps = demo.querySelectorAll('.words');
+      var ps = demo.querySelectorAll('.words .hlt');
       for (var p = 0; p < ps.length; p++) {
         var words = ps[p].textContent.trim().split(/\s+/);
         ps[p].textContent = '';
