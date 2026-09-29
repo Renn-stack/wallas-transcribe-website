@@ -1,4 +1,4 @@
-/* Wallas Transcribe — estilos compartidos */
+/* Wallas Transcribe - estilos compartidos */
 :root {
   --accent: #6D3FE0;
   --accent-2: #5A2DCF;
@@ -327,7 +327,7 @@ main section { padding-block: 3.5rem; }
 .site-footer nav a { color: var(--text); display: inline-flex; align-items: center; min-height: 2.75rem; }
 .site-footer p { max-width: 48rem; }
 
-/* ——— Animaciones ———
+/* --- Animaciones ---
    Solo si la persona no pidió reducir el movimiento (lang.js agrega la clase "anim").
    Ninguna se repite sin fin y la de la portada dura menos de 5 segundos. */
 @media (prefers-reduced-motion: no-preference) {

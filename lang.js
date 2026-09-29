@@ -41,7 +41,7 @@
         var name = f.elements.nombre.value.trim();
         var topic = f.elements.tema.options[f.elements.tema.selectedIndex].text;
         var msg = f.elements.mensaje.value.trim();
-        var body = msg + (name ? '\n\n— ' + name : '');
+        var body = msg + (name ? '\n\n- ' + name : '');
         location.href = f.getAttribute('data-mailto') +
           '?subject=' + encodeURIComponent('Wallas Transcribe: ' + topic) +
           '&body=' + encodeURIComponent(body);
