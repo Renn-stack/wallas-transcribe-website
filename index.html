@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="es-MX" data-title-es="Wallas Transcribe — Lee tus notas de voz" data-title-en="Wallas Transcribe — Read your voice notes">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wallas Transcribe — Lee tus notas de voz</title>
+  <meta name="description" content="App gratis para iPhone que convierte notas de voz y audios en texto. Hecha para personas con implante coclear o auxiliares auditivos. Privada y sin anuncios.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F6F4FA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0E0B17" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400..800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="lang.js"></script>
+</head>
+<body>
+  <a class="skip" href="#contenido"><span class="es">Saltar al contenido</span><span class="en">Skip to content</span></a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <!-- REEMPLAZA: icon.png (tu ícono de la app) -->
+        <img src="icon.png" alt="" width="36" height="36">
+        Wallas Transcribe
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html" aria-current="page"><span class="es">Inicio</span><span class="en">Home</span></a>
+        <a href="privacidad.html"><span class="es">Privacidad</span><span class="en">Privacy</span></a>
+        <a href="soporte.html"><span class="es">Soporte</span><span class="en">Support</span></a>
+      </nav>
+      <button id="lang-toggle" class="lang-btn" type="button" hidden><span class="es" lang="en">English</span><span class="en" lang="es-MX">Español</span></button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="wrap">
+        <div class="stack hero-text">
+          <p class="eyebrow reveal"><span class="es">App gratis para iPhone</span><span class="en">Free iPhone app</span></p>
+          <h1 class="reveal" style="--d:1"><span class="es">Lee tus <span class="hl">notas de voz.</span></span><span class="en">Read your <span class="hl">voice notes.</span></span></h1>
+          <p class="lead es reveal" style="--d:2">Wallas Transcribe convierte audios en texto dentro de tu iPhone. Para personas con implante coclear o auxiliares auditivos. Privada y sin anuncios.</p>
+          <p class="lead en reveal" style="--d:2">Wallas Transcribe turns audio into text right on your iPhone. Made for people with cochlear implants or hearing aids. Private, with no ads.</p>
+          <p class="reveal" style="--d:3">
+            <!-- REEMPLAZA: app-store-badge.svg por el distintivo oficial de Apple. Cambia href="#" por el enlace de tu app. -->
+            <a class="badge-link" href="#"><img src="app-store-badge.svg" width="180" height="60" alt="Descargar en la App Store" data-alt-en="Download on the App Store"></a>
+          </p>
+          <p class="note reveal" style="--d:3"><span class="es">Requiere iPhone con iOS 26 o posterior.</span><span class="en">Requires iPhone with iOS 26 or later.</span></p>
+          <ul class="chips reveal" style="--d:4">
+            <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span class="es">Gratis</span><span class="en">Free</span></li>
+            <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span class="es">Sin anuncios</span><span class="en">No ads</span></li>
+            <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span class="es">Sin cuentas</span><span class="en">No accounts</span></li>
+            <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span class="es">Todo en tu iPhone</span><span class="en">All on your iPhone</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-art reveal" style="--d:2">
+          <!-- Ilustración de la app: una nota de voz que se convierte en texto. Es decorativa; el texto de la portada ya lo explica. -->
+          <div class="phone" aria-hidden="true">
+            <div class="screen demo" id="demo">
+              <div class="island"></div>
+              <div class="status"><span>9:41</span><span class="batt"></span></div>
+              <div class="app-bar">
+                <span class="back">‹</span>
+                <span class="es">Nota de voz</span><span class="en">Voice note</span>
+              </div>
+              <p class="meta"><span class="es">Hoy, 9:38 · Español (México)</span><span class="en">Today, 9:38 · English (US)</span></p>
+              <div class="player">
+                <span class="play"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span>
+                <span class="wave">
+                  <i style="--b:0;--h:30%"></i><i style="--b:1;--h:55%"></i><i style="--b:2;--h:80%"></i><i style="--b:3;--h:45%"></i><i style="--b:4;--h:65%"></i><i style="--b:5;--h:95%"></i><i style="--b:6;--h:60%"></i><i style="--b:7;--h:35%"></i><i style="--b:8;--h:70%"></i><i style="--b:9;--h:50%"></i><i style="--b:10;--h:85%"></i><i style="--b:11;--h:40%"></i><i style="--b:12;--h:60%"></i><i style="--b:13;--h:90%"></i><i style="--b:14;--h:55%"></i><i style="--b:15;--h:30%"></i><i style="--b:16;--h:65%"></i><i style="--b:17;--h:45%"></i><i style="--b:18;--h:75%"></i><i style="--b:19;--h:35%"></i>
+                </span>
+                <span class="time">0:18</span>
+              </div>
+              <div class="state">
+                <span class="working"><span class="es">Transcribiendo…</span><span class="en">Transcribing…</span></span>
+                <span class="done"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span class="es">Listo</span><span class="en">Done</span></span>
+              </div>
+              <p class="words es">Hola, ya voy saliendo. Llego en quince minutos. ¿Me esperas en la entrada del cine?</p>
+              <p class="words en">Hi, I’m heading out now. I’ll be there in fifteen minutes. Can you wait for me at the theater entrance?</p>
+              <div class="actions">
+                <span><span class="es">Copiar</span><span class="en">Copy</span></span>
+                <span><span class="es">Compartir</span><span class="en">Share</span></span>
+              </div>
+            </div>
+          </div>
+          <img class="hero-icon" src="icon.png" width="96" height="96" alt="">
+          <button class="replay" id="demo-replay" type="button">
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4.5h4.5"/></svg>
+            <span class="es">Ver de nuevo la animación</span><span class="en">Replay the animation</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="para-quien">
+      <div class="wrap intro reveal">
+        <p class="eyebrow"><span class="es">Para quién es</span><span class="en">Who it’s for</span></p>
+        <h2 id="para-quien"><span class="es">Hecha para ti</span><span class="en">Made for you</span></h2>
+        <p class="lead es">Si usas implante coclear (IC) o auxiliares auditivos (AA), sabes que un audio puede costar mucho trabajo. Con Wallas Transcribe no tienes que adivinar: lo lees.</p>
+        <p class="lead en">If you use a cochlear implant (CI) or hearing aids (HA), you know audio messages can be hard work. With Wallas Transcribe you don’t have to guess: you read it.</p>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="como-funciona">
+      <div class="wrap">
+        <div class="intro reveal">
+          <p class="eyebrow"><span class="es">Cómo funciona</span><span class="en">How it works</span></p>
+          <h2 id="como-funciona"><span class="es">Así de fácil</span><span class="en">This easy</span></h2>
+          <p class="lead es">Funciona con WhatsApp, Telegram y cualquier app que permita “Compartir” un audio.</p>
+          <p class="lead en">Works with WhatsApp, Telegram and any app that lets you “Share” audio.</p>
+        </div>
+        <ol class="steps">
+          <li class="reveal" style="--d:0"><span class="es">Mantén presionada la nota de voz.</span><span class="en">Press and hold the voice note.</span></li>
+          <li class="reveal" style="--d:1"><span class="es">Toca “Compartir” y elige Wallas Transcribe.</span><span class="en">Tap “Share” and choose Wallas Transcribe.</span></li>
+          <li class="reveal" style="--d:2"><span class="es">Lee el texto. Aparece solo.</span><span class="en">Read the text. It appears on its own.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section aria-labelledby="capturas">
+      <div class="wrap">
+        <div class="intro reveal">
+          <p class="eyebrow"><span class="es">La app</span><span class="en">The app</span></p>
+          <h2 id="capturas"><span class="es">Míralo en acción</span><span class="en">See it in action</span></h2>
+        </div>
+        <!-- REEMPLAZA: captura-1.png, captura-2.png y captura-3.png por tus capturas de pantalla. Ajusta el texto alt si cambias lo que muestran. -->
+        <ul class="shots">
+          <li class="reveal" style="--d:0"><img src="captura-1.png" width="600" height="1300" loading="lazy" alt="Pantalla de una nota de voz convertida en texto" data-alt-en="Screen showing a voice note turned into text"></li>
+          <li class="reveal" style="--d:1"><img src="captura-2.png" width="600" height="1300" loading="lazy" alt="Pantalla de grabación con el tiempo transcurrido" data-alt-en="Recording screen showing elapsed time"></li>
+          <li class="reveal" style="--d:2"><img src="captura-3.png" width="600" height="1300" loading="lazy" alt="Lista de transcripciones guardadas" data-alt-en="List of saved transcriptions"></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="transcribe">
+      <div class="wrap">
+        <div class="intro reveal">
+          <p class="eyebrow"><span class="es">Fuentes</span><span class="en">Sources</span></p>
+          <h2 id="transcribe"><span class="es">Transcribe desde donde sea</span><span class="en">Transcribe from anywhere</span></h2>
+        </div>
+        <ul class="cards">
+          <li class="card reveal" style="--d:0">
+            <span class="tile"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 10v4M8 6v12M12 3v18M16 7v10M20 10v4"/></svg></span>
+            <h3><span class="es">Notas de voz</span><span class="en">Voice notes</span></h3>
+            <p class="es">Desde WhatsApp, Telegram y cualquier app con “Compartir”.</p>
+            <p class="en">From WhatsApp, Telegram and any app with “Share”.</p>
+          </li>
+          <li class="card reveal" style="--d:1">
+            <span class="tile"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4-2.5z"/></svg></span>
+            <h3><span class="es">Archivos y videos</span><span class="en">Files and videos</span></h3>
+            <p class="es">Sube audios desde Archivos o videos desde Fotos. La app saca el audio y lo transcribe.</p>
+            <p class="en">Add audio from Files or videos from Photos. The app pulls out the audio and transcribes it.</p>
+          </li>
+          <li class="card reveal" style="--d:2">
+            <span class="tile"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
+            <h3><span class="es">Muchos idiomas</span><span class="en">Many languages</span></h3>
+            <p class="es">Español de México por defecto y cualquier idioma que reconozca tu iPhone. Detecta el idioma solo o te pregunta cada vez.</p>
+            <p class="en">Mexican Spanish by default, plus any language your iPhone recognizes. It detects the language or asks you each time.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="graba">
+      <div class="wrap">
+        <div class="intro reveal">
+          <p class="eyebrow"><span class="es">Grabación</span><span class="en">Recording</span></p>
+          <h2 id="graba"><span class="rec" aria-hidden="true"></span><span class="es">Graba conversaciones y clases</span><span class="en">Record conversations and classes</span></h2>
+        </div>
+        <ul class="cards cards-2">
+          <li class="card reveal" style="--d:0">
+            <span class="tile"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+            <h3><span class="es">Con la pantalla bloqueada</span><span class="en">With the screen locked</span></h3>
+            <p class="es">Sigue grabando aunque bloquees el iPhone o abras otra app.</p>
+            <p class="en">Keeps recording when you lock your iPhone or open another app.</p>
+          </li>
+          <li class="card reveal" style="--d:1">
+            <span class="tile"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M10 2h4"/></svg></span>
+            <h3><span class="es">Siempre a la vista</span><span class="en">Always in view</span></h3>
+            <p class="es">El tiempo aparece en la pantalla bloqueada y en la Isla Dinámica.</p>
+            <p class="en">The time shows on the Lock Screen and in the Dynamic Island.</p>
+          </li>
+          <li class="card reveal" style="--d:2">
+            <span class="tile"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+            <h3><span class="es">Llamadas sin problema</span><span class="en">Calls, no problem</span></h3>
+            <p class="es">Si entra una llamada, se pausa. Al colgar, continúa sola.</p>
+            <p class="en">If a call comes in, it pauses. When you hang up, it resumes on its own.</p>
+          </li>
+          <li class="card reveal" style="--d:3">
+            <span class="tile"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 8v4l3 2"/></svg></span>
+            <h3><span class="es">Transcribe en segundo plano</span><span class="en">Transcribes in the background</span></h3>
+            <p class="es">Ve el avance en la pantalla bloqueada mientras haces otra cosa.</p>
+            <p class="en">See the progress on the Lock Screen while you do something else.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="leer">
+      <div class="wrap">
+        <div class="intro reveal">
+          <p class="eyebrow"><span class="es">Lectura</span><span class="en">Reading</span></p>
+          <h2 id="leer"><span class="es">Pensada para leer y escuchar</span><span class="en">Built for reading and listening</span></h2>
+        </div>
+        <ul class="cards">
+          <li class="card reveal" style="--d:0">
+            <span class="tile"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h8"/><path d="M16 15.5v5l4-2.5z"/></svg></span>
+            <h3><span class="es">Toca una frase</span><span class="en">Tap a sentence</span></h3>
+            <p class="es">El audio salta a ese momento. Útil si escuchas una parte con tu IC o AA.</p>
+            <p class="en">The audio jumps to that moment. Handy if you hear part of it with your CI or HA.</p>
+          </li>
+          <li class="card reveal" style="--d:1">
+            <span class="tile"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M8 7l4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg></span>
+            <h3><span class="es">Escucha, copia y comparte</span><span class="en">Play, copy and share</span></h3>
+            <p class="es">Reproduce el audio original. Copia o comparte el texto.</p>
+            <p class="en">Play the original audio. Copy or share the text.</p>
+          </li>
+          <li class="card reveal" style="--d:2">
+            <span class="tile"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg></span>
+            <h3><span class="es">Audios repetidos</span><span class="en">Repeated audio</span></h3>
+            <p class="es">Si el mismo audio llega otra vez, lo marca como DUPLICADO y usa el texto que ya tienes.</p>
+            <p class="en">If the same audio arrives again, it’s marked DUPLICATE and reuses the text you already have.</p>
+          </li>
+          <li class="card reveal" style="--d:0">
+            <span class="tile"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 7h4v4c0 3-1.5 5-4 6M14 7h4v4c0 3-1.5 5-4 6"/></svg></span>
+            <h3><span class="es">Puntuación automática</span><span class="en">Automatic punctuation</span></h3>
+            <p class="es">Comas y puntos en su lugar. La puedes apagar.</p>
+            <p class="en">Commas and periods where they belong. You can turn it off.</p>
+          </li>
+          <li class="card reveal" style="--d:1">
+            <span class="tile"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 19 8 5l5 14M5.2 13.5h5.6M14 19l3.5-9 3.5 9M15.2 16h4.6"/></svg></span>
+            <h3><span class="es">Texto grande</span><span class="en">Large text</span></h3>
+            <p class="es">Compatible con el tamaño de texto de tu iPhone. Modo claro, oscuro o automático.</p>
+            <p class="en">Supports your iPhone’s text size (Dynamic Type). Light, dark or automatic mode.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="privada">
+      <div class="wrap">
+        <div class="panel reveal">
+          <div class="panel-text">
+            <p class="eyebrow"><span class="es">Privacidad</span><span class="en">Privacy</span></p>
+            <h2 id="privada"><span class="es">100 % privada</span><span class="en">100% private</span></h2>
+            <p class="lead es">El reconocimiento de voz ocurre dentro de tu iPhone. Tu audio nunca sale del teléfono.</p>
+            <p class="lead en">Speech recognition happens on your iPhone. Your audio never leaves the phone.</p>
+            <ul class="checks es">
+              <li>Sin cuentas ni registro.</li>
+              <li>Sin anuncios.</li>
+              <li>Puedes no guardar el audio original y quedarte solo con el texto.</li>
+            </ul>
+            <ul class="checks en">
+              <li>No accounts, no sign-up.</li>
+              <li>No ads.</li>
+              <li>You can skip saving the original audio and keep only the text.</li>
+            </ul>
+            <p><a href="privacidad.html"><span class="es">Lee la política de privacidad</span><span class="en">Read the privacy policy</span></a></p>
+          </div>
+          <svg class="shield" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12.2l2.5 2.5 4.5-5"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="descarga">
+      <div class="wrap reveal">
+        <img class="cta-icon" src="icon.png" width="88" height="88" alt="">
+        <h2 id="descarga"><span class="es">Descárgala gratis</span><span class="en">Download it free</span></h2>
+        <p class="lead es">Para iPhone con iOS 26 o posterior. La primera vez que usas un idioma, se descarga su modelo de voz. Solo esa vez necesitas internet.</p>
+        <p class="lead en">For iPhone with iOS 26 or later. The first time you use a language, its speech model downloads. You only need internet that one time.</p>
+        <!-- REEMPLAZA: cambia href="#" por el enlace de tu app en la App Store. -->
+        <a class="badge-link" href="#"><img src="app-store-badge.svg" width="180" height="60" alt="Descargar en la App Store" data-alt-en="Download on the App Store"></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="foot-brand"><img src="icon.png" alt="" width="28" height="28"> Wallas Transcribe</p>
+      <nav aria-label="Pie de página">
+        <a href="index.html"><span class="es">Inicio</span><span class="en">Home</span></a>
+        <a href="privacidad.html"><span class="es">Política de privacidad</span><span class="en">Privacy policy</span></a>
+        <a href="soporte.html"><span class="es">Soporte</span><span class="en">Support</span></a>
+      </nav>
+      <p class="es">WhatsApp es una marca registrada de WhatsApp LLC. Telegram es una marca de Telegram FZ-LLC. Wallas Transcribe es una app independiente y no está afiliada, patrocinada ni respaldada por ellas.</p>
+      <p class="en">WhatsApp is a registered trademark of WhatsApp LLC. Telegram is a trademark of Telegram FZ-LLC. Wallas Transcribe is an independent app and is not affiliated with, sponsored or endorsed by them.</p>
+      <p>© 2026 Wallas Transcribe</p>
+    </div>
+  </footer>
+</body>
+</html>
