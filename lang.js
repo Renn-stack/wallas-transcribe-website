@@ -12,6 +12,13 @@
       if (!im.hasAttribute('data-alt-es')) im.setAttribute('data-alt-es', im.alt);
       im.alt = im.getAttribute('data-alt-' + l);
     }
+    var srcs = document.querySelectorAll('img[data-src-en]');
+    for (var k = 0; k < srcs.length; k++) {
+      var sm = srcs[k];
+      if (!sm.hasAttribute('data-src-es')) sm.setAttribute('data-src-es', sm.getAttribute('src'));
+      var ns = sm.getAttribute('data-src-' + l);
+      if (sm.getAttribute('src') !== ns) sm.setAttribute('src', ns);
+    }
     var ops = document.querySelectorAll('option[data-en]');
     for (var j = 0; j < ops.length; j++) ops[j].textContent = ops[j].getAttribute('data-' + l);
     try { localStorage.setItem('wt-lang', l); } catch (e) {}

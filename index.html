@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wallas Transcribe - Lee tus notas de voz</title>
-  <meta name="description" content="App gratis para iPhone que convierte notas de voz y audios en texto. Hecha para personas con implante coclear o auxiliares auditivos. Privada y sin anuncios.">
+  <meta name="description" content="App gratis para iPhone que convierte notas de voz, audios y conversaciones en vivo en texto, con traducción al instante. Hecha para personas con implante coclear o auxiliares auditivos. Privada y sin anuncios.">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#F6F4FA" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0E0B17" media="(prefers-color-scheme: dark)">
@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400..800&display=swap">
   <link rel="stylesheet" href="styles.css?v=4">
-  <script src="lang.js?v=4"></script>
+  <script src="lang.js?v=5"></script>
 </head>
 <body>
   <a class="skip" href="#contenido"><span class="es">Saltar al contenido</span><span class="en">Skip to content</span></a>
@@ -41,8 +41,8 @@
         <div class="stack hero-text">
           <p class="eyebrow reveal"><span class="es">App gratis para iPhone</span><span class="en">Free iPhone app</span></p>
           <h1 class="reveal" style="--d:1"><span class="es">Lee tus <span class="hl">notas de voz.</span></span><span class="en">Read your <span class="hl">voice notes.</span></span></h1>
-          <p class="lead es reveal" style="--d:2">Wallas Transcribe convierte audios en texto dentro de tu iPhone. Para personas con implante coclear o auxiliares auditivos. Privada y sin anuncios.</p>
-          <p class="lead en reveal" style="--d:2">Wallas Transcribe turns audio into text right on your iPhone. Made for people with cochlear implants or hearing aids. Private, with no ads.</p>
+          <p class="lead es reveal" style="--d:2">Wallas Transcribe convierte audios y conversaciones en vivo en texto dentro de tu iPhone, y los traduce al instante. Para personas con implante coclear o auxiliares auditivos. Privada y sin anuncios.</p>
+          <p class="lead en reveal" style="--d:2">Wallas Transcribe turns audio and live conversations into text right on your iPhone, and translates them instantly. Made for people with cochlear implants or hearing aids. Private, with no ads.</p>
           <p class="reveal" style="--d:3">
             <!-- REEMPLAZA: app-store-badge.svg por el distintivo oficial de Apple. Cambia href="#" por el enlace de tu app. -->
             <a class="badge-link" href="#"><img src="app-store-badge.svg" width="180" height="60" alt="Descargar en la App Store" data-alt-en="Download on the App Store"></a>
@@ -126,21 +126,58 @@
       </div>
     </section>
 
-    <section aria-labelledby="capturas">
+    <section aria-labelledby="en-vivo">
+      <div class="wrap">
+        <div class="intro reveal">
+          <p class="eyebrow"><span class="es">Nuevo: En vivo</span><span class="en">New: Live</span></p>
+          <h2 id="en-vivo"><span class="es">Lee lo que se dice, en vivo</span><span class="en">Read what’s said, live</span></h2>
+          <p class="lead es">En una plática, una clase o una conferencia, ve el texto mientras la persona habla.</p>
+          <p class="lead en">In a conversation, a class or a talk, see the text while the person is speaking.</p>
+        </div>
+        <ul class="cards cards-2">
+          <li class="card reveal" style="--d:0">
+            <span class="tile"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></span>
+            <h3><span class="es">Subtítulos en vivo</span><span class="en">Live captions</span></h3>
+            <p class="es">La frase que se está diciendo aparece en grande, al momento.</p>
+            <p class="en">The sentence being spoken shows up in large text, right away.</p>
+          </li>
+          <li class="card reveal" style="--d:1">
+            <span class="tile"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h8M8 3v2M10 5c0 4-2.5 7-6 8M6 9c1 2 3 3.5 5 4"/><path d="M13 21l4-10 4 10M14.5 17.5h5"/></svg></span>
+            <h3><span class="es">Traducción al instante</span><span class="en">Instant translation</span></h3>
+            <p class="es">Elige el idioma que se habla y a cuál traducir. Lee el original, la traducción o ambos.</p>
+            <p class="en">Choose the spoken language and the one to translate to. Read the original, the translation or both.</p>
+          </li>
+          <li class="card reveal" style="--d:2">
+            <span class="tile"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+            <h3><span class="es">Desde la pantalla bloqueada</span><span class="en">From the Lock Screen</span></h3>
+            <p class="es">Sigue la conversación sin desbloquear tu iPhone.</p>
+            <p class="en">Follow the conversation without unlocking your iPhone.</p>
+          </li>
+          <li class="card reveal" style="--d:3">
+            <span class="tile"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4h12l4 4v12H4z"/><path d="M8 4v5h7V4M8 20v-6h8v6"/></svg></span>
+            <h3><span class="es">Tú decides qué guardar</span><span class="en">You decide what to keep</span></h3>
+            <p class="es">Guarda el audio y la transcripción, o solo el texto. Ponle título y elige una carpeta.</p>
+            <p class="en">Save the audio and the transcript, or just the text. Give it a title and pick a folder.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="capturas">
       <div class="wrap">
         <div class="intro reveal">
           <p class="eyebrow"><span class="es">La app</span><span class="en">The app</span></p>
           <h2 id="capturas"><span class="es">Míralo en acción</span><span class="en">See it in action</span></h2>
         </div>
         <ul class="shots">
-          <li class="reveal" style="--d:0"><img src="captura-1.webp" width="920" height="2000" loading="lazy" alt="Pantalla principal de Wallas Transcribe con la lista de audios transcritos y los botones Subir y Grabar" data-alt-en="Wallas Transcribe home screen with the list of transcribed audio and the Upload and Record buttons"></li>
-          <li class="reveal" style="--d:1"><img src="captura-2.webp" width="920" height="2000" loading="lazy" alt="Texto de una transcripción con la frase que se está escuchando resaltada y los botones de pausa, copiar y compartir" data-alt-en="A transcription with the sentence being played highlighted, plus pause, copy and share buttons"></li>
-          <li class="reveal" style="--d:2"><img src="captura-3.webp" width="920" height="2000" loading="lazy" alt="Grabación en curso con el tiempo y el aviso: puedes salir de la app o bloquear el iPhone y sigue grabando" data-alt-en="Recording in progress with the timer and a note that you can leave the app or lock your iPhone and it keeps recording"></li>
+          <li class="reveal" style="--d:0"><img src="captura-1.webp" data-src-en="captura-1-en.webp" width="920" height="2000" loading="lazy" alt="Pantalla principal de Wallas Transcribe con el buscador, las carpetas y el botón En vivo" data-alt-en="Wallas Transcribe home screen with search, folders and the Live button"></li>
+          <li class="reveal" style="--d:1"><img src="captura-2.webp" data-src-en="captura-2-en.webp" width="920" height="2000" loading="lazy" alt="Transcripción en vivo de español a inglés, con la frase actual en grande y su traducción debajo" data-alt-en="Live transcription from Spanish to English, with the current sentence in large text and its translation below"></li>
+          <li class="reveal" style="--d:2"><img src="captura-3.webp" data-src-en="captura-3-en.webp" width="920" height="2000" loading="lazy" alt="Transcripción guardada con el texto en español y su traducción al inglés juntos" data-alt-en="Saved transcription showing the Spanish text and its English translation together"></li>
         </ul>
       </div>
     </section>
 
-    <section class="band" aria-labelledby="transcribe">
+    <section aria-labelledby="transcribe">
       <div class="wrap">
         <div class="intro reveal">
           <p class="eyebrow"><span class="es">Fuentes</span><span class="en">Sources</span></p>
@@ -169,7 +206,7 @@
       </div>
     </section>
 
-    <section aria-labelledby="graba">
+    <section class="band" aria-labelledby="graba">
       <div class="wrap">
         <div class="intro reveal">
           <p class="eyebrow"><span class="es">Grabación</span><span class="en">Recording</span></p>
@@ -204,7 +241,7 @@
       </div>
     </section>
 
-    <section class="band" aria-labelledby="leer">
+    <section aria-labelledby="leer">
       <div class="wrap">
         <div class="intro reveal">
           <p class="eyebrow"><span class="es">Lectura</span><span class="en">Reading</span></p>
@@ -241,11 +278,17 @@
             <p class="es">Compatible con el tamaño de texto de tu iPhone. Modo claro, oscuro o automático.</p>
             <p class="en">Supports your iPhone’s text size (Dynamic Type). Light, dark or automatic mode.</p>
           </li>
+          <li class="card reveal" style="--d:2">
+            <span class="tile"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></svg></span>
+            <h3><span class="es">Carpetas y búsqueda</span><span class="en">Folders and search</span></h3>
+            <p class="es">Ordena tus transcripciones en carpetas y busca cualquier palabra dentro de ellas.</p>
+            <p class="en">Sort your transcripts into folders and search for any word inside them.</p>
+          </li>
         </ul>
       </div>
     </section>
 
-    <section aria-labelledby="privada">
+    <section class="band" aria-labelledby="privada">
       <div class="wrap">
         <div class="panel reveal">
           <div class="panel-text">
