@@ -273,7 +273,7 @@ main section { padding-block: 3.5rem; }
 .cta { text-align: center; }
 .cta .wrap { display: grid; justify-items: center; gap: 1rem; }
 .cta .lead { margin-inline: auto; }
-.cta .badge-link { margin-top: .75rem; }
+.cta .get { margin-top: .75rem; justify-content: center; }
 .cta-icon { width: 5.5rem; border-radius: 22.5%; box-shadow: 0 1rem 2rem -.75rem rgb(60 30 140 / .45); margin-bottom: .5rem; }
 
 /* Textos largos */
@@ -361,3 +361,8 @@ main section { padding-block: 3.5rem; }
   @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgb(255 95 122 / .55); } 60% { box-shadow: 0 0 0 .4em rgb(255 95 122 / 0); } }
 }
 @media print { .reveal { opacity: 1 !important; transform: none !important; } }
+
+/* Botón de descarga y aviso de Android */
+.get { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1rem; }
+.soon { display: inline-flex; align-items: center; gap: .5rem; min-height: 2.75rem; padding: .5rem 1rem; border: 1px solid var(--line); border-radius: 999px; font-size: .9375rem; font-weight: 600; color: var(--muted); }
+.soon-dot { width: .5rem; height: .5rem; border-radius: 50%; background: #3DDC84; flex: none; }
